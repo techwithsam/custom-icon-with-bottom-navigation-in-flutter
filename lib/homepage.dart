@@ -31,10 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: _widgetList[_currentIndex],
+      appBar: AppBar(title: Text(widget.title)),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
@@ -59,6 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
               icon: Icon(MyFlutterApp.user), label: 'Profile'),
         ],
       ),
+      body: Center(child: _widgetList[_currentIndex]),
     );
   }
 
